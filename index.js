@@ -1,5 +1,6 @@
 const express = require("express");
 
+const port = process.env.PORT || 3000; 
 const app = express();
 
 app.use(express.json());
@@ -13,6 +14,6 @@ app.post("/", (req, res) => {
   return res.json({ response: "ok" });
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("listening");
 });
